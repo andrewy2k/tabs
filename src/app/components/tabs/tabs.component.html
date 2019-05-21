@@ -1,0 +1,13 @@
+<div class="tabs-btn-c">
+    <div
+            class="tabs-btn-c__elem"
+            *ngFor="let tab of tabs; let ind = index"
+            (click)="tabClick(ind)"
+            [ngClass]="{'tabs-btn-c__elem_active':tabS.activeTabIndex.value===ind}"
+    >
+        Tab <b>{{ tab }}</b>
+    </div>
+</div>
+<div class="content-c">
+    <ng-content select="*"></ng-content>
+</div>
